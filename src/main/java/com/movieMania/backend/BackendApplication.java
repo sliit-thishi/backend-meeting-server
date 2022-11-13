@@ -40,6 +40,11 @@ public class BackendApplication {
 		return "set";
 	}
 
+	public static String typeSet(){
+		typeLogic = true;
+		return "set";
+	}
+
 	public String stop(){
 		typeLogic=false;
 		return "stopped";
@@ -81,9 +86,9 @@ public class BackendApplication {
 				System.out.println("stopped");
 				pr.println("over");
 				pr.flush();
-				System.out.println("stopped");
-				ss.close();
-				break;
+				String res = typeSet();
+				System.out.println(res);
+
 			}
 
 		}
